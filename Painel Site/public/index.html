@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Supabase</title>
+</head>
+<body>
+
+    <h2>Editar valor do Virtuosas</h2>
+    <form id="edit-form">
+        <label for="new-value">Novo valor:</label>
+        <input type="text" id="new-value" name="new-value" required>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <script>
+        async function loadData() {
+            try {
+                const response = await fetch('/data');
+                const data = await response.json();
+
+                if (data.length > 0) {
+                    // Exibe o valor do id 1
+                    document.getElementById('data-output').textContent = JSON.stringify(data[0]);
+                    document.getElementById('new-value').value = data[0].valor; // Preenche o valor no formulário
+                } else {
+                    document.getElementById('data-output').textContent = 'Nenhum dado encontrado para o id 1.';
+                }
+            } catch (error) {
+                document.getElementById('data-output').textContent = 'Erro ao carregar dados.';
+                console.error('Erro ao carregar dados:', error);
+            }
+        }
+
+        async function updateData(valor) {
+            try {
+                const response = await fetch('/data', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ valor })
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    document.getElementById('data-output').textContent = JSON.stringify(data[0]);
+                } else {
+                    console.error('Erro ao atualizar dados:', data.error);
+                }
+            } catch (error) {
+                console.error('Erro ao atualizar dados:', error);
+            }
+        }
+
+        // Carregar dados ao carregar a página
+        loadData();
+
+        // Atualiza os dados ao submeter o formulário
+        document.getElementById('edit-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const newValue = document.getElementById('new-value').value;
+            updateData(newValue);
+        });
+    </script>
+</body>
+</html>

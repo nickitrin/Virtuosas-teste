@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Virtuosas</title>
+    <link rel="shortcut icon" type="image/ico" href="src/favicon.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body >
+    <div class="container-body">
+        <div id="topo" class="container-Head">
+            <img class="logo-imagem" src="src/virtuosas logo 1.png" alt="virtuosas logo">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </div>
+    
+        <nav class="container-menu">
+            <ul class="container-menulista">
+                <li><a class="item-listamenu" href="#info-evento">Informações do Evento</a></li>
+                <li><a class="item-listamenu" href="#sobre">Sobre</a></li>
+                <li><a class="item-listamenu" href="#como-chegar">Como Chegar</a></li>
+                <li><a class="item-listamenu" href="#itens-proibidos">Itens Proibidos</a></li>
+                <li><a class="item-listamenu" href="#redes-sociais">Redes Sociais</a></li>
+                <li><a class="item-listamenu" href="#playlist">Playlist</a></li>
+                <li><a class="item-listamenu" href="#patrocinio">Patrocínio</a></li>
+            </ul>
+        </nav>
+    </div>
+
+        <div class="container-cronometro">
+            <div class="container-cronometrodiasehoras">
+                <div class="container-cronometrodiaslinha">
+                    <p class="faltamtexto">FALTAM &nbsp;</p>
+                    <p id="contadordias" ></p>
+                    <p>&nbsp;E </p>
+                </div>
+                <div class="container-cronometrohoraslinha">
+                    <p id="contador"></p>
+                </div>
+            </div>
+            <p class="container-cronometrotexto">HORAS</p>
+        </div>
+
+        <div class="container-conteudo">
+
+        <div class="container-inscr">
+            <div class="container-inscritas">
+                <div class="barra-container">
+                    <div class="barra-preenchida" id="barra"></div>
+                </div>                  
+                <p class="numero-insc" id="numero-insc">Carregando...</p> 
+            </div>
+            <a class="button-inscr" href=" https://www.ticketmaster.com.br/event/congresso-das-mulheres-da-taquara-no-qualistage"> Compre Seu Ingresso</a>
+            <p style="color: red;">*Não forneceremos mais camisas</p>
+        </div>
+
+        <div id="info-evento" class="container-infoevento">
+            <div class="container-periodoprinc">            
+                <div class="container-periodo">            
+                    <p style="margin-left: 0px;" class="container-periodonome">DIA</p>
+                    <p class="container-periodoinfo">15/09/2024</p>
+                </div>
+                <div class="container-periodo">           
+                    <p class="container-periodonome" >HORÁRIO</p>
+                    <p class="container-periodoinfo">|  09:00 às 19:00</p>
+                </div>
+                <div class="container-periodo">
+                    <p class="container-periodonome">LOCAL</p>
+                    <p class="container-periodoinfo">| Qualistage</p>
+                </div>
+            </div>
+            <div  class="container-infoeventoendereco">
+                 <p>Av. Ayrton Senna, 3000 - Barra da Tijuca</p>    
+            </div>
+            
+        </div>
+
+        <div id="sobre" class="container-sobre">
+            <div class="container-fundooqueevirtuosas">
+            <div class="container-oqueevirtuosas">
+                <h1 id="titulooqvirt" class="container-titulorosa">O que é o virtuosas? </h1>
+                <p class="container-textorosa">  Congresso Virtuosas, um convite para mergulhar na essência do ser feminino e na presença de Jesus.
+                Em um ambiente acolhedor, inspirador e com muito amor, onde vamos explorar como a fé em Cristo fortalece 
+                e eleva o papel da mulher em sua jornada espiritual e na sociedade. Juntas, vamos compartilhar momentos de 
+                oração, reflexão e muito louvor, nutrindo nossa conexão com Deus e umas 
+                com as outras. Venha se unir a nós nesta jornada de descoberta, renovação e amor! Seja parte de uma jornada
+                espiritual única!</p>
+            </div>
+            </div>
+        </div>
+
+        <div id="como-chegar" class="container-chegar">
+            <div class="container-chegartexto" >
+                <p class="container-titulorosa" style="margin-bottom: 22px;" >Como Chegar...</p>
+                <p class="container-periodoinfo2"> Qualistage</p>
+                <p class="container-infoeventoendereco2" >Av. Ayrton Senna, 3000 - Barra da Tijuca</p>
+                <p class="container-textorosa">O Qualistage é a mais moderna casa de espetáculos do Brasil, um complexo multiuso com 
+                    capacidade para acomodar, confortavelmente, 9 mil pessoas em pé ou 3.500 sentadas, 
+                    com diversas configurações possíveis.</p>
+            </div>
+            <div class="container-chegarmapa" >
+                <iframe class="container-chegarmapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.11513591371!2d-43.36539692490938!3d-22.98279327920167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdb58bebd875f%3A0x8287e417959644a8!2sQualistage!5e0!3m2!1spt-BR!2sbr!4v1724108321001!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+        </div>
+        
+
+        <div id="itens-proibidos" class="container-itens">
+
+            <div class="container-itenstitulo">
+                <p> Itens Proibidos</p>
+                <img src="src/block-icon.svg">
+            </div>
+            <div class="container-listaproibidos">
+                <ul class="container-itenslista">
+                        <li>Câmera fotográfica profissional e/ou com lentes removíveis, filmadora, bastões de selfie, tripés, drones e lasers;</li>
+                        <li>Guarda-chuva;</li>
+                        <li>Bebidas alcoólicas;</li>
+                        <li>Vapes/ cigarros eletrônicos;</li>
+                        <li>Alimentos industrializados e/ou manufaturados em quantidade;</li>
+                        <li>Materiais ou objetos pontiagudos ou cortantes;</li>
+
+                </ul>
+                <ul class="container-itenslista">
+                    <li>Copos e garrafas de vidro, latas ou qualquer outro tipo de embalagem dura;</li>
+                    <li>Armas de fogo de qualquer tipo, objetos e substâncias ilícitas;</li>   
+                    <li>Capacetes de motos ou similares.</li>  
+                    <li>Fogos de artifício;</li> 
+                    <li>Papel em rolo;</li> 
+                    <li> Bandeiras e faixas com mastro;</li> 
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="redes-sociais" class="container-redessociais">
+            <h1 class="container-titulorosa" style="margin-bottom: 16px;">Redes Sociais</h1>
+            <div class="container-instagramtotal">
+                <div class="container-instagramvirt">
+                    <div class="container-fotosinsta">                    
+                        <div onclick="window.location='https://www.instagram.com/p/C-2g4DoRQ3X/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==';" class="image-container">
+                            <img src="src/post3.png" alt="Post Instagram 3o lote">
+                            <div class="overlay">
+                                <img src="sua-imagem-sobreposicao.png" alt="">
+                            </div>
+                        </div>
+                        <div onclick="window.location='https://www.instagram.com/p/C-5daG8xgtd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==';" class="image-container">
+                            <img src="src/post4.png" alt="Post Instagram Almoço">
+                            <div class="overlay">
+                                <img src="sua-imagem-sobreposicao.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a class="button-instavirt" href="https://www.instagram.com/virtuosascm/">
+                        <img class="logo-insta-button" src="src/insta-menor.svg" alt=""> 
+                        <p>Visite o nosso instagram</p>
+                    </a>
+                </div>
+                
+                <div class="container-instagramparo">
+                    <div onclick="window.location='https://www.instagram.com/p/C-0Xj4Xxc16/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==';" class="container-fotosinsta">                    
+                        <div class="image-container">
+                            <img src="src/post2.png" alt="">
+                            <div class="overlay">
+                                <img src="sua-imagem-sobreposicao.png" alt="">
+                            </div>
+                        </div>
+                        <div onclick="window.location='//www.instagram.com/p/C92QTw2Mox7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==';" class="image-container">
+                            <img src="src/post1.png" alt="Post Instagram Ostensório">
+                            <div class="overlay">
+                            </div>
+                        </div>
+                    </div>                
+                    <a class="button-instaparo" href="https://www.instagram.com/rosariodefatimataquara?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> 
+                        <img class="logo-insta-button" src="src/insta-menor.svg" alt="">
+                        <p>Visite o Instagram da Paróquia</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="playlist" class="container-spotify">
+            <h1 class="container-titulorosa" style="margin-bottom: 16px; margin-top: 16px;" >Playlist Virtuosas</h1>
+            <div class="container-spotifyplayer">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7DK9SBOw7ybCnWoJgcWe0b?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            
+        </div>
+        
+        <div id="patrocinio" class="container-patrocionio">
+            <img class="imagem-fundo-cravo" src="src/cravoesq.png" alt="">
+            <div class="container-conteudopatrocionio">            
+                <p class="container-textopatrocionio">Quer fazer parte desse evento maravilhoso e ajudar na 
+                evangelização de <u>milhares</u> de mulheres?</p>
+                <a class="button-patrocinador" href=""> Seja um patrocinador</a>
+            </div>
+            <img class="imagem-fundo-cravo" src="src/cravodir.png" alt="">
+
+        </div>
+         </div>
+        <div class="container-footer">
+            <a class="texto-footer" href="#topo">Voltar ao Topo</a>
+            <img src="src/logo-igreja.png" alt="">
+        </div>
+    </div>
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

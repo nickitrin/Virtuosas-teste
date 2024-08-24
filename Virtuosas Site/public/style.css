@@ -1,0 +1,924 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    background-color: #FEF2F4;
+    font-family: 'Alice';
+    overflow-x: hidden;
+}
+.container-conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 64px 0 64px 0;
+    gap: 64px;
+}
+
+
+/* CABEÇALHO */
+.logo-imagem {
+    height: 80px;
+}
+.container-Head{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.container-menu {
+    background-color: #E665A5;
+    font-family: "Alice", serif;
+    height: 40px;
+    display: flex; /* Adiciona flexbox para alinhar itens horizontalmente */
+    align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+    justify-content: center; /* Centraliza o menu no desktop */
+}
+
+/* Ícone do menu (inicialmente oculto) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #E665A5;
+    margin: 10px 10px 0 0 ; /* Move o ícone para a extrema direita */
+}
+
+.container-menulista {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px 010px 0;
+    gap: 4.44vw;
+}
+
+.item-listamenu {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4vw;
+}
+
+/* Estilos para telas menores que 786px */
+@media (max-width: 786px) {
+    .container-Head{
+        justify-content: center;
+    }
+    .container-menu {
+        height: auto;
+        flex-direction: column; /* Alinha o conteúdo verticalmente */
+    }
+
+    .container-menulista {
+        display: none; /* Esconde o menu inicialmente */
+
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone de menu */
+        position: absolute;
+        right: 20px; 
+    }
+
+    .container-menu.show .container-menulista {
+        display: flex; /* Mostra o menu ao clicar no ícone */
+        flex-direction: column;
+    }
+
+    .item-listamenu {
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+
+/* INSCRITAS */
+.container-inscr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-cronometro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-size: cover;
+    align-items: flex-end;
+    background-image: url('src/Group\ 12.png');
+    font-family: 'Bebas Neue';
+    color: #E665A5;
+    height: 16.11vw;
+}
+.container-cronometrodiaslinha{
+    display: flex;
+    flex-direction: row;
+    font-size: 5vw;
+}
+.container-cronometrohoraslinha{
+ font-size: 10vw;
+}
+.container-cronometrodiasehoras{
+    display: flex;
+    flex-direction: column;
+}
+.faltamtexto{
+    color: white;
+}
+.container-cronometrotexto{
+    display: flex;
+    align-self: flex-end;
+    color: white;
+    font-size: 5vw;
+    padding-bottom: 1.38vw;
+}
+
+@media (max-width:496px) {
+    .container-cronometro{
+
+        height: 32vw;
+    }
+    .container-cronometrodiaslinha{
+
+        font-size: 10vw;
+    }
+    .container-cronometrohoraslinha{
+     font-size: 20vw;
+    }
+
+    .container-cronometrotexto{
+
+        font-size: 10vw;
+
+    }
+}
+.barra-container {
+    width: 80%;
+    background-color: #e0e0e0; /* Cor de fundo do container */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a barra não transborde as bordas arredondadas */
+}
+.barra-preenchida {
+    width: 0%; /* Inicialmente, a barra tem largura zero */
+    height: 57px;
+    background-color: #E665A5; /* Cor rosa da barra */
+    transition: width 2s ease-in-out; /* Animação de 2 segundos para o crescimento da barra */
+}  
+.container-inscr{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+.container-inscritas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+.numero-insc{
+    font-size: 24px;
+    color: #E665A5;
+
+}
+.button-inscr{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 2.5vw;
+    justify-content: center;
+    align-items: center;
+    height: 6.94vw;
+    width: 41.38vw;
+    background-color: #E665A5;
+    border-radius: 0.55vw;
+    color: white;
+    font-family: 'Bebas Neue';
+}
+@media (max-width: 786px) {
+    .button-inscr{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        font-size: 24px;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 70%;
+        background-color: #E665A5;
+        border-radius: 8px;
+        color: white;
+        font-family: 'Bebas Neue';
+    }
+    }
+
+/* INFORMACOES DO EVENTO */
+
+.container-infoevento{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFE8F0;
+    padding: 42px 12.5vw 42px 12.5vw;
+    border-radius: 8px;
+
+}
+.container-periodonome{
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    color: #E665A5;
+}
+.container-periodoinfo{
+
+    font-size: 48px;
+    color: #CD7B0F;
+
+}
+.container-periodoprinc{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-infoeventoendereco{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: #8B8B8B;
+    margin-top: 12px;
+    align-self: flex-end;
+}
+
+@media (max-width: 1120px) {
+    .container-periodonome {
+        font-size: 1.66vw;
+    }
+    .container-periodoinfo {
+        font-size: 3.33vw;
+    }
+
+}
+
+@media (max-width: 786px) {
+    .container-infoevento{
+        display: flex;
+        flex-direction: column;
+        background-color: #FFE8F0;
+        padding: 0;
+        width: 95%;
+        border-radius: 8px;
+    
+    }
+    .container-periodonome {
+        font-size: 16px;
+    }
+    .container-periodoinfo{
+
+        font-size: 24px;
+        color: #CD7B0F;
+    
+    }
+
+    .container-periodoprinc{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 20px 0 20px;
+    }
+
+    .container-infoeventoendereco{
+        display: flex;
+        flex-direction: row;
+        font-size: 2.0vw;
+        color: #8B8B8B;
+        margin: 10px 20px 20px 0;
+        align-self: flex-end;
+    }
+
+}
+
+    @media (max-width:496px) {
+        .container-periodoinfo{
+    
+            font-size:20px;
+            color: #CD7B0F;
+        
+        }
+        .container-infoeventoendereco{
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+            color: #8B8B8B;
+            margin: 10px 20px 20px 0;
+            align-self: flex-end;
+        }
+        .container-periodonome {
+            font-size: 20px;
+        }
+    
+            
+        }
+
+        @media (max-width:440px) {
+            .container-periodoinfo{
+        
+                font-size:4.5vw;
+                color: #CD7B0F;
+            
+            }
+            .container-infoeventoendereco{
+                display: flex;
+                flex-direction: row;
+                font-size: 3vw;
+                color: #8B8B8B;
+                margin: 10px 20px 20px 0;
+                align-self: flex-end;
+            }
+            .container-periodonome {
+                font-size: 4.5vw;
+            }
+        
+                
+            }
+
+
+
+/* SOBRE O EVENTO */
+.container-sobre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container-fundooqueevirtuosas{
+    width: 80%;
+    background-image: url('src/image-fundooqe.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+.container-oqueevirtuosas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    
+    width: 50%;
+    height: 305px;
+    margin: 10px;
+    color: #E665A5;
+    
+    background-color: #FFE8F0;
+    border-radius: 8px;
+}
+.container-titulorosa{
+    font-size: 32px;
+    padding: 0 3.61vw 0 3.61vw;
+    color: #E665A5;
+    margin-bottom: 12px;
+    font-size: 2.22vw;
+    
+}
+.container-textorosa{
+    font-size: 16px;
+    text-align: justify;
+    padding: 0 3.61vw 0 3.61vw;
+    font-size: 16px;
+}
+
+@media (max-width:786px) {
+    .container-titulorosa{
+        font-size: 32px;
+        padding: 0 3.61vw 0 3.61vw;
+        color: #E665A5;
+        
+        margin-bottom: 12px;
+        
+    }
+    #titulooqvirt{
+        color: white;
+    }
+    .container-textorosa{
+        font-size: 16px;
+        text-align: justify;
+        padding: 0 3.61vw 0 3.61vw;
+        font-size: 16px;
+    }
+
+    .container-fundooqueevirtuosas{
+        width:100%;
+        background-image: none;
+        background-position: center;
+        border-radius: 0;
+    }
+    .container-oqueevirtuosas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        padding: 20px 0 20px 0;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        color: white;
+        background-color: #E665A5;
+        border-radius: 0;
+    }
+
+}
+
+@media (max-width:488px) {
+    .container-titulorosa{
+        font-size: 32px;
+        padding: 0 3.61vw 0 3.61vw;
+        color: #E665A5;
+        margin-bottom: 12px;
+    }
+        
+    }
+
+
+
+/* COMO CHEGAR */
+.container-chegar{
+    display: flex;
+    flex-direction: row;
+    gap:1.11vw;
+    width: 80%;
+}
+.container-periodoinfo2{
+
+    font-size: 48px;
+    color: #CD7B0F;
+    padding: 0 3.61vw 0 3.61vw;
+
+}
+.container-chegartexto{
+    background-color: #FFE8F0;
+    color: #E665A5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    border-radius: 8px;
+    text-align: justify;
+}
+.container-infoeventoendereco2{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.38vw;
+    color: #8B8B8B;
+    margin-top: 12px;
+    margin-bottom: 22px;
+    padding: 0 3.61vw 0 3.61vw;
+}
+@media (max-width: 1120px) {
+    .container-chegarmapa{
+        display: flex;
+        width: 51.11vw;
+        height: 51.11vw;
+        border:0;
+
+    }
+    .container-infoeventoendereco2{
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        color: #8B8B8B;
+        margin-top: 12px;
+        margin-bottom: 22px;
+        padding: 0 3.61vw 0 3.61vw;
+    }
+
+}
+@media (max-width:786px) {
+    .container-chegar{
+        display: flex;
+        flex-direction: column;
+        gap:1.11vw;
+        width: 95%;
+    }
+    
+    .container-chegarmapa{
+        display: flex;
+        width: 100%;
+        border:0;
+
+    }
+    .container-chegartexto{
+        padding-top: 16px;
+        padding-bottom: 16px ;
+    }
+    .container-periodoinfo2{
+
+        font-size: 48px;
+        color: #CD7B0F;
+        padding: 0 3.61vw 0 3.61vw;
+    
+    }
+
+}
+
+
+
+
+
+/* ITENS PROIBIDOS */
+.container-itens{
+
+    width: 80%;
+}
+.container-itenstitulo{
+    display: flex;
+    padding: 0 52px 0 52px;
+    margin-bottom: 32px;
+    gap: 10px;
+    flex-direction: row;
+    font-size: 32px;
+    color: #CD7B0F;
+}
+.container-listaproibidos{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.container-itenslista{
+    padding: 0 3.61vw 0 3.61vw;
+    width: 45%;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: disc;
+    padding-right: 10px;
+    color: #E665A5;
+}
+@media (max-width:786px) {
+    .container-itens{
+        width: 95vw;
+    }
+
+    .container-listaproibidos{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .container-itenslista{
+        
+        width: 95%;
+    }
+    .container-itenstitulo{
+        display: flex;
+        padding: 0;
+        margin-bottom: 32px;
+        flex-direction: row;
+        font-size: 6.4vw;
+        color: #CD7B0F;
+    }
+}
+@media (max-width:440px) {
+    .container-itenstitulo{
+        display: flex;
+        padding: 0;
+        margin-bottom: 32px;
+        flex-direction: row;
+        font-size: 32px;
+        color: #CD7B0F;
+    }
+}
+
+
+/* REDES SOCIAIS */
+.container-redessociais{
+    width: 80%;
+}
+.container-instagramtotal{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.container-instagramvirt{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE8F0;
+    border-radius: 8px;
+    
+}
+.container-instagramparo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8EEE2;
+    border-radius: 8px;
+
+}
+.container-fotosinsta{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 32px;
+
+}
+.button-instavirt{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 90%;
+    height: 80px;
+    background-color: #E665A5;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 24px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+.button-instaparo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    width: 90%;
+    height: 80px;
+    background-color: #F6CFA0;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 24px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(src/opacity-insta.png);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0.4; /* Transparência da imagem sobreposta */
+}
+.image-container:hover .overlay {
+    opacity: 1; /* Mostra a sobreposição ao passar o mouse */
+}
+.container-instagramtotal{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width:786px) {
+    .container-redessociais{
+        width: 95%;
+    }
+    .container-instagramtotal{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+    }
+
+
+    .container-instagramvirt{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFE8F0;
+        border-radius: 8px;
+        
+    }
+    .container-instagramparo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #F8EEE2;
+        border-radius: 8px;
+    
+    }
+    .button-instavirt{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 90%;
+        height: 17.77vw;
+        background-color: #E665A5;
+        text-decoration: none;
+        color: white;
+        font-family: 'Bebas Neue';
+        font-size: 5.33vw;
+        border-radius: 8px;
+        margin-bottom: 32px;
+    }
+    .button-instaparo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+        align-items: center;
+        width: 90%;
+        height: 17.77vw;
+        background-color: #F6CFA0;
+        text-decoration: none;
+        color: white;
+        font-family: 'Bebas Neue';
+        font-size: 5.33vw;
+        border-radius: 8px;
+        margin-bottom: 32px;
+    
+    }
+    .logo-insta-button{
+        height: 8.88vw;
+    }
+    
+}
+
+
+/* SPOTIFY */
+.container-spotify{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFE8F0;
+    border-radius: 8px;
+    width: 80%;
+
+}
+.container-spotifyplayer{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-bottom:32px ;
+    width: 96%;
+}
+
+@media (max-width:786px) {
+    .container-spotify{
+        display: flex;
+        flex-direction: column;
+        background-color: #FFE8F0;
+        border-radius: 8px;
+        width: 95%;
+    
+    }
+}
+
+
+
+/* PATROCINIO */
+.container-patrocionio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.container-conteudopatrocionio {
+    z-index: 1; /* Coloca o conteúdo acima das imagens */
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 40%;
+}
+.container-textopatrocionio {
+    color: #E665A5;
+    margin-bottom: 32px;
+    font-size: 24px;
+}
+.button-patrocinador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 8px;
+    background: linear-gradient(92deg, #CD7B0F 0%, #91560A 100%);
+    font-family: 'Bebas Neue';
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.imagem-fundo-cravo{
+    height: 30vw;
+}
+@media (max-width:786px) {
+   
+    .container-textopatrocionio {
+        color: #E665A5;
+        margin-bottom: 32px;
+        font-size: 4vw;
+    }
+    .container-conteudopatrocionio {
+        z-index: 1; /* Coloca o conteúdo acima das imagens */
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        width: 60%;
+    }
+    .button-patrocinador {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12.72vw;
+        border-radius: 8px;
+        background: linear-gradient(92deg, #CD7B0F 0%, #91560A 100%);
+        font-family: 'Bebas Neue';
+        color: white;
+        text-decoration: none;
+        font-size: 4.58vw;
+    }
+}
+
+/* RODAPE*/
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.texto-footer{
+    text-decoration: none;
+    color: #B8B8B8;
+
+}
+
+
+
